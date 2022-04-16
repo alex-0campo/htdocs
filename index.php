@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'] . 'global.php');
+    include($_SERVER['DOCUMENT_ROOT'] . 'templates/global.php');
 ?>
 
 <!doctype html>
