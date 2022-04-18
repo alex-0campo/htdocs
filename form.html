@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form JS</title>
+</head>
+<body>
+    <form action="" method="get">
+        <select id="separator" name="separator">
+            <optgroup label="-- separator --">
+                <option value="space">Space</option>
+                <option value="digits">Digits</option>
+                <option value="spcl chars">Spcl Characters</option>
+            </optgroup>            
+        </select>
+        <br>
+        <select id="numwords" name="numwords">
+            <optgroup label="-- wordCount --">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </optgroup>            
+        </select>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document
+                .getElementById('numwords')
+                .addEventListener('input', numWords);
+        });
+
+
+        // let separator = document.getElementById('separator');
+        // let numwords = document.getElementById('numwords');
+        // numwords.addEventListener('input', numWords);
+
+        function numWords(event) {
+            let selected = event.target;
+            console.log(selected.value)
+        };
+    </script>
+</body>
+</html>
