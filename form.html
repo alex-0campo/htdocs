@@ -29,6 +29,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             document
+                .getElementById('separator')
+                .addEventListener('input', separatorValue);
+            document
                 .getElementById('numwords')
                 .addEventListener('input', numWords);
         });
@@ -38,9 +41,14 @@
         // let numwords = document.getElementById('numwords');
         // numwords.addEventListener('input', numWords);
 
+        function separatorValue(event) {
+            let separator = event.target;
+            console.log('Separator: ' + separator.value)
+        };
+
         function numWords(event) {
             let selected = event.target;
-            console.log(selected.value)
+            console.log('WordCount: ' + selected.value)
         };
     </script>
 </body>
